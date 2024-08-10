@@ -29,3 +29,4 @@ for (let i = 1; i <= input.length - 2; i++) {
 }
 
 console.log(ans); // 37
+

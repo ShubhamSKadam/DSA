@@ -17,4 +17,6 @@ console.log(inputArr[r] - inputArr[l - 1]); // 14
 // Total TC : O(n)
 
 // Remember we can also do a suffix sum by just iterating the array 
-// backwards.
+// backwards
+
+
