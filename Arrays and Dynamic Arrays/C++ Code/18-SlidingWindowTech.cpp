@@ -1,6 +1,7 @@
 #include<iostream>
 #include<vector>
 using namespace std;
+// Time Complexity : O(n)
 void slidingWindow(vector<int> arr, int n,int k){
 
 	// Find the sum of first K elements
