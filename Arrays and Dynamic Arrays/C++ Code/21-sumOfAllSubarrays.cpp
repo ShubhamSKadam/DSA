@@ -13,19 +13,15 @@ int main(){
 		v.push_back(x);
 	}
 
-
-	for (int i = 0; i < n; ++i)
-	{
-		for(int j=n-1;j>=i;j--){
-			int sum = 0;
-			for(int k=j;k>=i;k--){
-				sum+=v[k];
-			}
-			cout<<"Sum of subarray startinng from "<<i<<" :"<<sum<<endl;
+	for(int i=0;i<n;i++){
+		int sum = 0;
+		for(int j=i;j<n;j++){
+			sum+=v[j];
+			cout<<sum<<" "<<endl;
 		}
 	}
 
-	cout<<"Time complexity of this approach will be O(n^3)"<<endl;
+	cout<<"Time complexity of this approach will be O(n^2"<<endl;
 }
 
 
