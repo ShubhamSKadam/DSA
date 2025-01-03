@@ -1,27 +1,29 @@
-#include<iostream>
-#include<vector>
+#include <iostream>
+#include <vector>
 using namespace std;
-int main(){
-	
+int main()
+{
+
 	int n;
-	cin>>n;
+	cin >> n;
 
 	vector<int> v;
-	for(int i=0;i<n;i++){
+	for (int i = 0; i < n; i++)
+	{
 		int x;
-		cin>>x;
+		cin >> x;
 		v.push_back(x);
 	}
 
-	for(int i=0;i<n;i++){
+	int ans = 0;
+	for (int i = 0; i < n; i++)
+	{
 		int sum = 0;
-		for(int j=i;j<n;j++){
-			sum+=v[j];
-			cout<<sum<<" "<<endl;
+		for (int j = i; j < n; j++)
+		{
+			sum += v[j];
+			ans += sum;
 		}
 	}
-
-	cout<<"Time complexity of this approach will be O(n^2"<<endl;
+	cout << ans << endl;
 }
-
-

@@ -1,16 +1,19 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-int main () {
+int main()
+{
 
 	int n;
 	cin >> n;
 
 	int *arr = new int[n];
-	for (int i = 0; i < n; i++) {
+	for (int i = 0; i < n; i++)
+	{
 		cin >> arr[i];
 	}
 
-	for (int i = n - 2; i >= 0; i--) {
+	for (int i = n - 2; i >= 0; i--)
+	{
 		arr[i] = max(arr[i + 1], arr[i]);
 	}
 
@@ -19,7 +22,6 @@ int main () {
 		cout << arr[i] << " ";
 	}
 	cout << endl;
-
 
 	// int q;
 	// cin >> q;
@@ -30,5 +32,5 @@ int main () {
 	// 	cout << arr[idx] << endl;
 	// }
 
-	delete [] arr;
+	delete[] arr;
 }
