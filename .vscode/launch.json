@@ -1,0 +1,15 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Debug Current File",
+            "program": "${file}",
+            "runtimeExecutable": "/Users/guestuser01/.nvm/versions/node/v20.16.0/bin/node",
+            "skipFiles": [
+                "<node_internals>/**"
+            ]
+        }
+    ]
+}
