@@ -4,30 +4,20 @@ using namespace std;
 
 bool checkPermutation(string s1, string s2)
 {
+    vector<int> freqS1(26, 0);
+    vector<int> freqS2(26, 0);
 
-    bool isPresent = true;
     for (int i = 0; i < s1.size(); i++)
     {
-        bool isTempPresent = false;
-        for (int j = 0; j < s2.size(); j++)
-        {
-            if (s1[i] == s2[j])
-            {
-                isTempPresent = true;
-                break;
-            }
-        }
-        isPresent = isTempPresent && isPresent;
-        //     if (!isTempPresent)
-        //     {
-        //         isPresent = false;
-        //     }
-        //     else
-        //     {
-        //         isPresent = true;
-        //     }
+        freqS1[s1[i] - 'a']++;
     }
-    return isPresent;
+
+    for (int i = 0; i < s2.size(); i++)
+    {
+        freqS2[s2[i] - 'a']++;
+    }
+
+    return freqS1 == freqS2;
 }
 
 int main()
@@ -44,9 +34,10 @@ int main()
 
         int sizeOfs1 = s1.size();
         bool ans = false;
-        for (int i = sizeOfs1; i < s2.size(); i++)
+        for (int i = sizeOfs1; i <= s2.size(); i++)
         {
             string tempStr = s2.substr(i - sizeOfs1, sizeOfs1);
+            cout << tempStr << endl;
             ans = checkPermutation(s1, tempStr);
             if (ans)
             {

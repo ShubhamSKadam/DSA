@@ -36,4 +36,4 @@ const minSwaps = () => {
   return legalElements - maxCountGroup;
 };
 
-console.log(minSwaps());
+
