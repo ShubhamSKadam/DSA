@@ -2,8 +2,7 @@ let arr = [1, 3, 0, 2];
 
 for (let i = 0; i < arr.length; i++) {
   if (arr[i] >= 0) {
-    let index = arr[i],
-      value = i;
+    let index = arr[i], value = i;
 
     while (index != i) {
       let temp = arr[index];
