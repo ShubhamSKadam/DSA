@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-void moveZeroes(vector<int>& arr) {
+void moveZeroes(vector<int> &arr) {
   int n = arr.size();
 
   if (n == 1) {
