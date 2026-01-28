@@ -1,21 +1,18 @@
-const str = ["flower", "flow", "flight"];
+var longestCommonPrefix = function (strs) {
+  strs.sort();
 
-let currentCommon = str[0];
-let result = "";
-let i = 1;
-while (i < str.length) {
-  // strip down the common among the current and next string
-  let currentString = str[i];
-  for (let j = 0; j < str[i].length; j++) {
-    if (currentCommon[j] == currentString[j]) {
-      result += currentString[j];
+  let stringOne = strs[0];
+  let stringTwo = strs[strs.length - 1];
+
+  let n = Math.min(stringOne.length, stringTwo.length);
+
+  let result = "";
+  for (let i = 0; i < n; i++) {
+    if (stringOne[i] == stringTwo[i]) {
+      result += stringOne[i];
     } else {
       break;
     }
   }
-  currentCommon = result;
-  result = "";
-  i++;
-}
-
-console.log(currentCommon);
+  return result;
+};
