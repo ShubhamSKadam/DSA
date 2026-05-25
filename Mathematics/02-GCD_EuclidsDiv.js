@@ -1,4 +1,4 @@
-var findGCD = function (arr) {
+var findGCD = function(arr) {
   let maxm = arr[0];
   let minm = arr[0];
 
@@ -20,3 +20,5 @@ var findGCD = function (arr) {
 
   return maxm;
 };
+
+
